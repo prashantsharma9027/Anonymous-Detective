@@ -10,6 +10,16 @@
     --btn: #0079ff;
     --btn-hover: #60abff;
   }
+
+  .develooper{
+      text-align: center;
+      font-size: 150%;
+      font-weight: bold;
+  }
+
+  a{
+    color: blueviolet;
+  }
   
   * {
     margin: 0;

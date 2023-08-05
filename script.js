@@ -25,7 +25,6 @@ const twitter = get("twitter");
 const company = get("company");
 let darkMode = false;
 
-// Event Listeners
 btnsubmit.addEventListener("click", function () {
   if (input.value !== "") {
     getUserData(url + input.value);
@@ -56,9 +55,7 @@ btnmode.addEventListener("click", function () {
   }
 });
 
-// Functions
 
-//API CALL
 function getUserData(gitUrl) {
   fetch(gitUrl)
     .then((response) => response.json())
@@ -110,9 +107,8 @@ function updateProfile(data) {
 
 
 
-//SWITCH TO DARK MODE - activateDarkMode()
 function darkModeProperties() {
-  root.setProperty("--lm-bg", "#141D2F");
+  root.setProperty("--lm-bg", "black");
   root.setProperty("--lm-bg-content", "#1E2A47");
   root.setProperty("--lm-text", "white");
   root.setProperty("--lm-text-alt", "white");
@@ -128,7 +124,7 @@ function darkModeProperties() {
 
 }
 
-//SWITCH TO LIGHT MODE - activateLightMode()
+
 function lightModeProperties() {
   root.setProperty("--lm-bg", "#F6F8FF");
   root.setProperty("--lm-bg-content", "#FEFEFE");
@@ -146,15 +142,10 @@ function lightModeProperties() {
 }
 
 
-//INITIALISE UI
 function init() {
-  //initialise dark-mode variable to false;
-  //darkMode = true -> dark mode enable karna h 
-  //darMode = false -> light mode enable karna h 
+
   darkMode = false;
 
-  //HW
-// const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
 
   const value = localStorage.getItem("dark-mode");
 
@@ -173,8 +164,7 @@ function init() {
   }
 
 
-  //by default, pranaygupta ki info show krre h UI pr
-  getUserData(url + "thepranaygupta");
+  getUserData(url + "prashantsharma9027");
 }
 
 init();
